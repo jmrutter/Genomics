@@ -1,0 +1,15 @@
+Process:
+
+Genome Positions:
+
+- I analyzed each line in 50,000 slices (imported the whole line and focused on the block in question) and recorded the differences at each point in an array.  After I got the information I needed from a line, I replaced it with the next line in memory.
+- Once the algorithm had looked through all the lines, it wrote the results into a csv file, and proceeded on to the next 50,000 entries.
+- After the information was partitioned out in 20 csvs, I wrote another script that read through the csvs and counted the number of differences at each point, and recorded that in another array.
+- In the original csvs, the differences are annotated as LineIndex: GenomeValue (numerical)
+
+Line Differences:
+
+- I analyzed each line for variations (imported the whole line) and recorded the differences at each point. After I got the information I needed from one entire line, I replaced it with the next line in memory.
+- All differences were stored in an array.  Once the algorithm had looked through 100 lines, it wrote the results into a csv, and proceeded on to the next 100 lines.
+- After the information was partitioned out in 16 csvs, I wrote another script that read through the csvs and counted the number of differences in each line, and recorded that in another array.
+- In the original csvs, the differences are annotated as GenomePosition:GenomeValue (numerical)
